@@ -1,0 +1,100 @@
+:root {
+    --main-color:rgba(234, 238, 241, 0.712);
+    --second-color:rgb(59, 99, 71);
+    --main-font:'Norse-Bold', sans-serif;
+    --text-color:rgb(0, 0, 0);
+    --font-size:24px;
+}
+@font-face {
+    font-family:Norse-Bold;
+    src: url('./Norse-Bold.otf');
+}
+* {
+    margin:0;
+    padding:0;
+    gap:0;
+    border:none;
+}
+body {
+    justify-content: center;
+    display:flex;
+    flex-direction: row;;
+    overflow-y:hidden;
+}
+.header {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-family:'Courier New', Courier, monospace;
+    font-size:var(--font-size);
+    line-height:clamp(.8em,1.5em,2em);
+    font-weight:600;    
+}
+
+#sidePanelIMG {
+    width:25vw;
+    height:100vh;
+}
+.inputRow {
+    display:flex;
+    flex-direction: row;
+    gap:100px;
+    margin-left:25%;
+    
+}
+.inputBox {
+    padding:20px;
+    border-radius:15px;
+}
+.inputBox:invalid {
+    border:red solid 2px;
+}
+.inputBox:valid {
+    border:rgb(38, 96, 232) solid 3px;
+}
+.inputLabel {
+    font-family:var(--main-font);
+    color:white;
+}
+.inputBox, .inputLabel {
+    display:block;
+    
+}
+#pText{
+    margin:10px 20px 10px 20px;
+}
+#formBox {
+    background-color: var(--second-color);
+    border-radius:10px;
+    margin-left:10px;
+    padding:10px;
+    padding-bottom:60px;
+    margin-right:15px;
+    box-shadow:10px 10px;
+}
+#formBox > legend {
+    color:white;
+    font-family: var(--main-font);
+    margin-left:25%;
+    margin-bottom:10px;
+}
+#odinIcon {
+    position:absolute;
+    width:min(100%, 200px);
+    left:80px;
+    top:180px;
+}
+#submitButton {
+    background-color: var(--second-color);
+    padding:25px;
+    width:150px;
+    font-family:var(--main-font);
+    color:white;
+    border-radius:15px;
+    border:1px solid black;
+}
+#buttonDiv {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px 90px 0 0;
+}
